@@ -115,10 +115,8 @@ public class GetApiController {
 	// http://localhost:8080/api/name/홍아
 	// dto 맵핑은 @PathVariable 선언 없이 사용하자.
 	// dto 안에 맵핑할 변수와 키 값이 같아야 한다.
-	@GetMapping("/name/{userName}")
+	@GetMapping("/user/{age}/name/{name}/email/{email}")
 	public UserRequest getUser( UserRequest dto) {
-		UserRequest userRequest = new UserRequest();
-		userRequest.setName(dto.getName());
-		return userRequest; 
+		return dto;
 	}
 }
